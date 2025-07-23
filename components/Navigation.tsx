@@ -40,7 +40,7 @@ export default function Navigation() {
             href="/"
             className={`font-bold text-xl transition-colors ${theme === "dark" ? "text-white" : "text-gray-900"}`}
           >
-            KingLotus
+            KingLotuss
           </Link>
 
           {/* Desktop Navigation */}
