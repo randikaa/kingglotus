@@ -53,19 +53,6 @@ export default function Home() {
                   <div className={`h-px w-full ${theme === "dark" ? "bg-white/10" : "bg-gray-300"}`} />
                 </div>
               </div>
-              {/* <Link
-                href="https://lumalabs.ai"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-8 h-8 relative opacity-80 hover:opacity-100 transition-opacity"
-              >
-                <Image
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/LumaLogo%201-MA3upjPymxFHKoHJgpdAUfZMeKGq3i.png"
-                  alt="Luma Logo"
-                  fill
-                  className="object-contain"
-                />
-              </Link> */}
             </div>
           </div>
 

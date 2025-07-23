@@ -26,7 +26,7 @@ interface Frame {
 const initialFrames: Frame[] = [
   {
     id: 1,
-    video: "https://static.cdn-luma.com/files/981e483f71aa764b/Company%20Thing%20Exported.mp4",
+    video: "https://cdn.jsdelivr.net/gh/Team-Hologram/lotuss/1.mp4",
     defaultPos: { x: 0, y: 0, w: 4, h: 4 },
     corner: "https://static.cdn-luma.com/files/bcf576df9c38b05f/1_corner_update.png",
     edgeHorizontal: "https://static.cdn-luma.com/files/bcf576df9c38b05f/1_vert_update.png",
@@ -39,7 +39,7 @@ const initialFrames: Frame[] = [
   },
   {
     id: 2,
-    video: "https://static.cdn-luma.com/files/58ab7363888153e3/WebGL%20Exported%20(1).mp4",
+    video: "https://cdn.jsdelivr.net/gh/Team-Hologram/lotuss/2.mp4",
     defaultPos: { x: 4, y: 0, w: 4, h: 4 },
     corner: "https://static.cdn-luma.com/files/bcf576df9c38b05f/2_corner_update.png",
     edgeHorizontal: "https://static.cdn-luma.com/files/bcf576df9c38b05f/2_vert_update.png",
@@ -52,7 +52,7 @@ const initialFrames: Frame[] = [
   },
   {
     id: 3,
-    video: "https://static.cdn-luma.com/files/58ab7363888153e3/Jitter%20Exported%20Poster.mp4",
+    video: "https://cdn.jsdelivr.net/gh/Team-Hologram/lotuss/3.mp4",
     defaultPos: { x: 8, y: 0, w: 4, h: 4 },
     corner: "https://static.cdn-luma.com/files/3d36d1e0dba2476c/3_Corner_update.png",
     edgeHorizontal: "https://static.cdn-luma.com/files/3d36d1e0dba2476c/3_hori_update.png",
@@ -65,7 +65,7 @@ const initialFrames: Frame[] = [
   },
   {
     id: 4,
-    video: "https://static.cdn-luma.com/files/58ab7363888153e3/Exported%20Web%20Video.mp4",
+    video: "https://cdn.jsdelivr.net/gh/Team-Hologram/lotuss/4.mp4",
     defaultPos: { x: 0, y: 4, w: 4, h: 4 },
     corner: "https://static.cdn-luma.com/files/9e67e05f37e52522/4_corner_update.png",
     edgeHorizontal: "https://static.cdn-luma.com/files/9e67e05f37e52522/4_hori_update.png",
@@ -78,7 +78,7 @@ const initialFrames: Frame[] = [
   },
   {
     id: 5,
-    video: "https://static.cdn-luma.com/files/58ab7363888153e3/Logo%20Exported.mp4",
+    video: "https://cdn.jsdelivr.net/gh/Team-Hologram/lotuss/5.mp4",
     defaultPos: { x: 4, y: 4, w: 4, h: 4 },
     corner: "https://static.cdn-luma.com/files/9e67e05f37e52522/5_corner_update.png",
     edgeHorizontal: "https://static.cdn-luma.com/files/9e67e05f37e52522/5_hori_update.png",
@@ -91,7 +91,7 @@ const initialFrames: Frame[] = [
   },
   {
     id: 6,
-    video: "https://static.cdn-luma.com/files/58ab7363888153e3/Animation%20Exported%20(4).mp4",
+    video: "https://cdn.jsdelivr.net/gh/Team-Hologram/lotuss/6.mp4",
     defaultPos: { x: 8, y: 4, w: 4, h: 4 },
     corner: "https://static.cdn-luma.com/files/1199340587e8da1d/6_corner.png",
     edgeHorizontal: "https://static.cdn-luma.com/files/1199340587e8da1d/6_corner-1.png",
@@ -104,7 +104,7 @@ const initialFrames: Frame[] = [
   },
   {
     id: 7,
-    video: "https://static.cdn-luma.com/files/58ab7363888153e3/Illustration%20Exported%20(1).mp4",
+    video: "https://cdn.jsdelivr.net/gh/Team-Hologram/lotuss/7.mp4",
     defaultPos: { x: 0, y: 8, w: 4, h: 4 },
     corner: "https://static.cdn-luma.com/files/b80b5aa00ccc33bd/7_corner.png",
     edgeHorizontal: "https://static.cdn-luma.com/files/b80b5aa00ccc33bd/7_hori.png",
@@ -117,7 +117,7 @@ const initialFrames: Frame[] = [
   },
   {
     id: 8,
-    video: "https://static.cdn-luma.com/files/58ab7363888153e3/Art%20Direction%20Exported.mp4",
+    video: "https://cdn.jsdelivr.net/gh/Team-Hologram/lotuss/8.mp4",
     defaultPos: { x: 4, y: 8, w: 4, h: 4 },
     corner: "https://static.cdn-luma.com/files/981e483f71aa764b/8_corner.png",
     edgeHorizontal: "https://static.cdn-luma.com/files/981e483f71aa764b/8_hori.png",
@@ -130,7 +130,7 @@ const initialFrames: Frame[] = [
   },
   {
     id: 9,
-    video: "https://static.cdn-luma.com/files/58ab7363888153e3/Product%20Video.mp4",
+    video: "https://cdn.jsdelivr.net/gh/Team-Hologram/lotuss/9.mp4",
     defaultPos: { x: 8, y: 8, w: 4, h: 4 },
     corner: "https://static.cdn-luma.com/files/981e483f71aa764b/9_corner.png",
     edgeHorizontal: "https://static.cdn-luma.com/files/981e483f71aa764b/9_hori.png",

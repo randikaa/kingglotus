@@ -20,7 +20,7 @@ const translations: Translations = {
   contribute: { en: "Contribute", si: "දායකත්වය" },
 
   // Home page
-  brandDesigner: { en: "Brand Designer at Luma?", si: "ලුමා හි සන්නාම නිර්මාණකරු?" },
+  brandDesigner: { en: "Wants to About me?", si: "මං ගැන දැනගන්න ඕනද?" },
   brandDescription1: {
     en: "Luma is looking to hire a multi-disciplinary Brand Designer to develop and maintain the brand identity and communicate the story of Luma to the world.",
     si: "ලුමා සන්නාම අනන්‍යතාවය සංවර්ධනය කිරීමට සහ ලෝකයට ලුමාගේ කතාව සන්නිවේදනය කිරීමට බහු-විෂයක සන්නාම නිර්මාණකරුවෙකු බඳවා ගැනීමට අපේක්ෂා කරයි.",
