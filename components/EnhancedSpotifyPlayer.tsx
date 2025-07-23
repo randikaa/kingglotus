@@ -27,7 +27,7 @@ const mockSongs: Song[] = [
     duration: 200,
     image: "/placeholder.svg?height=300&width=300",
     preview_url: "https://www.soundjay.com/misc/sounds/bell-ringing-05.wav",
-    spotify_url: "https://open.spotify.com/track/0VjIjW4GlULA4LGoDOLVKN",
+    spotify_url: "https://open.spotify.com/track/1eAAmf2ccUFXvz3KsUQ5bE?si=6a2153732ecb41f5",
   },
   {
     id: "2",
@@ -37,7 +37,7 @@ const mockSongs: Song[] = [
     duration: 203,
     image: "/placeholder.svg?height=300&width=300",
     preview_url: "https://www.soundjay.com/misc/sounds/bell-ringing-05.wav",
-    youtube_url: "https://www.youtube.com/watch?v=TUVcZfQe-Kw",
+    youtube_url: "https://youtu.be/YNGh4Qkgw8w?si=xL0KWK_3nCcdKs24",
   },
 ]
 
@@ -59,6 +59,23 @@ export default function EnhancedSpotifyPlayer() {
 
     return () => clearInterval(interval)
   }, [isPlaying])
+
+  // ...existing code...
+
+useEffect(() => {
+  if (audioRef.current) {
+    audioRef.current.src = currentSong.preview_url
+    audioRef.current.volume = volume / 100
+    audioRef.current.play().then(() => {
+      setIsPlaying(true)
+    }).catch(() => {
+      // Autoplay might be blocked by browser, handle if needed
+    })
+  }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+}, []) // Run only on mount
+
+// ...existing code...
 
   const togglePlay = () => {
     if (audioRef.current) {

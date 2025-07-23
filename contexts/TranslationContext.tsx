@@ -22,12 +22,12 @@ const translations: Translations = {
   // Home page
   brandDesigner: { en: "Wants to About me?", si: "මං ගැන දැනගන්න ඕනද?" },
   brandDescription1: {
-    en: "Luma is looking to hire a multi-disciplinary Brand Designer to develop and maintain the brand identity and communicate the story of Luma to the world.",
-    si: "ලුමා සන්නාම අනන්‍යතාවය සංවර්ධනය කිරීමට සහ ලෝකයට ලුමාගේ කතාව සන්නිවේදනය කිරීමට බහු-විෂයක සන්නාම නිර්මාණකරුවෙකු බඳවා ගැනීමට අපේක්ෂා කරයි.",
+    en: "I’m King Lotus, I’m a Sri Lankan rapper who speaks the truth through music. My songs are not just about beats — they’re about real life, real feelings, and real stories. I use strong words and deep lyrics to talk about what’s happening around us.I rap in different styles like trap, drill, lo-fi, and conscious rap. Each track has a message. Sometimes it’s about pain, sometimes power — but always real.",
+    si: "මම තමයි King Lotus, ලංකාවේ underground rap scene එකේ නව ජීවයක් ගෙනාව, හඬින්ම නඩත්තු වෙන්න පුළුවන් වාක්‍යවලින් පිරුණු මගේ bars හරහා, මම කතා කරන්නේ ගම්මිරිස් වගේ හරියටම තියෙන සත්‍යය. Beats වල rhythm එකට නටනවට වඩා, මගේ lyrics වල rhythm එකට හිත වෙනස් වෙනවා. මගේ style එකෙදී trap, drill, lo-fi, conscious rap — එකක්වත් හැරෙන්නෙ නෑ.",
   },
   brandDescription2: {
-    en: "You will use a combination of graphic design, motion design, web design and video production/editing skills across traditional and innovative tools.",
-    si: "ඔබ සම්ප්‍රදායික සහ නව්‍ය මෙවලම් හරහා ග්‍රැෆික් නිර්මාණය, චලන නිර්මාණය, වෙබ් නිර්මාණය සහ වීඩියෝ නිෂ්පාදන/සංස්කරණ කුසලතා සංයෝජනයක් භාවිතා කරනු ඇත.",
+    en: "King Lothus isn’t just a name. It’s a voice for people who don’t get heard.",
+    si: "King Lothus කියන්නෙ නමක් නෙවෙයි — එය හැඟීමක්.",
   },
   favoriteWorks: { en: "Here are some of our favorite works so far.", si: "මෙතෙක් අපගේ ප්‍රියතම කෘති කිහිපයක් මෙන්න." },
 
