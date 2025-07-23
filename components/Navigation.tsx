@@ -40,7 +40,7 @@ export default function Navigation() {
             href="/"
             className={`font-bold text-xl transition-colors ${theme === "dark" ? "text-white" : "text-gray-900"}`}
           >
-            Luma
+            KingLotus
           </Link>
 
           {/* Desktop Navigation */}
@@ -50,7 +50,7 @@ export default function Navigation() {
                 <Link
                   key={item.name}
                   href={item.href}
-                  className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
+                  className={`px-3 py-2 rounded-[5px] text-sm font-medium transition-colors ${
                     pathname === item.href
                       ? theme === "dark"
                         ? "bg-white/10 text-white"
