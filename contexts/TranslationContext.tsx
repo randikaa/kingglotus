@@ -26,8 +26,8 @@ const translations: Translations = {
     si: "මම තමයි King Lotuss, ලංකාවේ underground rap scene එකේ නව ජීවයක් ගෙනාව, හඬින්ම නඩත්තු වෙන්න පුළුවන් වාක්‍යවලින් පිරුණු මගේ bars හරහා, මම කතා කරන්නේ ගම්මිරිස් වගේ හරියටම තියෙන සත්‍යය. Beats වල rhythm එකට නටනවට වඩා, මගේ lyrics වල rhythm එකට හිත වෙනස් වෙනවා. මගේ style එකෙදී trap, drill, lo-fi, conscious rap — එකක්වත් හැරෙන්නෙ නෑ.",
   },
   brandDescription2: {
-    en: "King Lothuss isn’t just a name. It’s a voice for people who don’t get heard.",
-    si: "King Lothus කියන්නෙ නමක් නෙවෙයි — එය හැඟීමක්.",
+    en: "King Lotuss isn’t just a name. It’s a voice for people who don’t get heard.",
+    si: "King Lotuss කියන්නෙ නමක් නෙවෙයි — එය හැඟීමක්.",
   },
   favoriteWorks: { en: "Here are some of our favorite works so far.", si: "මෙතෙක් අපගේ ප්‍රියතම කෘති කිහිපයක් මෙන්න." },
 

@@ -67,20 +67,20 @@ export default function Footer() {
           >
             <div className="flex items-center justify-center space-x-3">
               <Link href="/" className="flex items-center space-x-3">
-                <div className="w-8 h-8 sm:w-10 sm:h-10 relative">
+                {/* <div className="w-8 h-8 sm:w-10 sm:h-10 relative">
                   <Image
                     src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/LumaLogo%201-MA3upjPymxFHKoHJgpdAUfZMeKGq3i.png"
                     alt="Luma Logo"
                     fill
                     className="object-contain"
                   />
-                </div>
+                </div> */}
                 <span
                   className={`text-xl sm:text-2xl font-bold transition-colors ${
                     theme === "dark" ? "text-white" : "text-gray-900"
                   }`}
                 >
-                  Luma
+                  Kinglotuss
                 </span>
               </Link>
             </div>
@@ -89,7 +89,7 @@ export default function Footer() {
                 theme === "dark" ? "text-white/70" : "text-gray-600"
               }`}
             >
-              Creating exceptional digital experiences through innovative design and creative storytelling.
+              King Lothus isn’t just a name. It’s a voice for people who don’t get heard.
             </p>
           </motion.div>
 
@@ -109,7 +109,7 @@ export default function Footer() {
                   className={`transition-colors ${theme === "dark" ? "text-white/60" : "text-gray-500"}`}
                 />
                 <span className={`text-sm transition-colors ${theme === "dark" ? "text-white/70" : "text-gray-600"}`}>
-                  hello@luma.com
+                  hello@kinglotuss.com
                 </span>
               </div>
               <div className="flex items-center justify-center space-x-2">
@@ -118,7 +118,7 @@ export default function Footer() {
                   className={`transition-colors ${theme === "dark" ? "text-white/60" : "text-gray-500"}`}
                 />
                 <span className={`text-sm transition-colors ${theme === "dark" ? "text-white/70" : "text-gray-600"}`}>
-                  +1 (555) 123-4567
+                  +94 (74) 381-9590
                 </span>
               </div>
             </div>
@@ -128,7 +128,7 @@ export default function Footer() {
                 className={`transition-colors ${theme === "dark" ? "text-white/60" : "text-gray-500"}`}
               />
               <span className={`text-sm transition-colors ${theme === "dark" ? "text-white/70" : "text-gray-600"}`}>
-                San Francisco, CA
+                Colombo, Sri Lanka
               </span>
             </div>
           </motion.div>
@@ -293,7 +293,7 @@ export default function Footer() {
               <input
                 type="email"
                 placeholder="Enter your email"
-                className={`flex-1 px-4 py-3 sm:py-4 rounded-lg text-sm sm:text-base transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 ${
+                className={`flex-1 px-4 py-3 sm:py-4 rounded-lg text-sm rounded-[10px] sm:text-base transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 ${
                   theme === "dark"
                     ? "bg-white/10 border border-white/20 text-white placeholder:text-white/50"
                     : "bg-white border border-gray-300 text-gray-900 placeholder:text-gray-500"
@@ -302,7 +302,7 @@ export default function Footer() {
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="px-6 py-3 sm:py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white text-sm sm:text-base font-medium rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-200 whitespace-nowrap"
+                className="px-6 py-3 rounded-[10px] sm:py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white text-sm sm:text-base font-medium rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-200 whitespace-nowrap"
               >
                 Subscribe
               </motion.button>
@@ -325,7 +325,7 @@ export default function Footer() {
               theme === "dark" ? "text-white/60" : "text-gray-500"
             }`}
           >
-            © 2024 Luma. All rights reserved. Made with ❤️ in San Francisco.
+            © 2025 Wideech. All rights reserved. Made with ❤️ in Wideech.
           </p>
           <div className="flex flex-wrap justify-center gap-3 sm:gap-4 text-xs sm:text-sm">
             <Link
