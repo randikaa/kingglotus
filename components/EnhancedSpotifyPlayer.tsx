@@ -21,22 +21,22 @@ interface Song {
 const mockSongs: Song[] = [
   {
     id: "1",
-    title: "Blinding Lights",
+    title: "Simba",
     artist: "The Weeknd",
     album: "After Hours",
     duration: 200,
     image: "/placeholder.svg?height=300&width=300",
-    preview_url: "https://www.soundjay.com/misc/sounds/bell-ringing-05.wav",
+    preview_url: "https://cdn.jsdelivr.net/gh/Team-Hologram/lotusssimba/simba.mp3",
     spotify_url: "https://open.spotify.com/track/1eAAmf2ccUFXvz3KsUQ5bE?si=6a2153732ecb41f5",
   },
   {
     id: "2",
-    title: "Levitating",
+    title: "Mawila",
     artist: "Dua Lipa",
     album: "Future Nostalgia",
     duration: 203,
     image: "/placeholder.svg?height=300&width=300",
-    preview_url: "https://www.soundjay.com/misc/sounds/bell-ringing-05.wav",
+    preview_url: "https://cdn.jsdelivr.net/gh/Team-Hologram/lotussmawila/mawila.mp3",
     youtube_url: "https://youtu.be/YNGh4Qkgw8w?si=xL0KWK_3nCcdKs24",
   },
 ]
@@ -48,34 +48,35 @@ export default function EnhancedSpotifyPlayer() {
   const [currentTime, setCurrentTime] = useState(0)
   const [volume, setVolume] = useState(50)
   const [isLiked, setIsLiked] = useState(false)
-  const audioRef = useRef<HTMLVideoElement>(null)
+  const audioRef = useRef<HTMLAudioElement>(null)
 
+  // Update currentTime every second if playing
   useEffect(() => {
     const interval = setInterval(() => {
       if (isPlaying && audioRef.current) {
         setCurrentTime(audioRef.current.currentTime)
       }
     }, 1000)
-
     return () => clearInterval(interval)
   }, [isPlaying])
 
-  // ...existing code...
-
-useEffect(() => {
-  if (audioRef.current) {
+  // Autoplay first song on mount
+  useEffect(() => {
+  if (audioRef.current && currentSong.preview_url) {
+    console.log("Setting up autoplay for:", currentSong.title)
     audioRef.current.src = currentSong.preview_url
     audioRef.current.volume = volume / 100
+    audioRef.current.muted = true
+
     audioRef.current.play().then(() => {
+      console.log("Playback started")
+      audioRef.current!.muted = false
       setIsPlaying(true)
-    }).catch(() => {
-      // Autoplay might be blocked by browser, handle if needed
+    }).catch((err) => {
+      console.warn("Autoplay blocked or error:", err)
     })
   }
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-}, []) // Run only on mount
-
-// ...existing code...
+}, [currentSong])
 
   const togglePlay = () => {
     if (audioRef.current) {
@@ -104,7 +105,7 @@ useEffect(() => {
 
   return (
     <>
-      {/* Enhanced Floating Player Button */}
+      {/* Floating Player Button */}
       <motion.div
         className="fixed bottom-8 right-8 z-40"
         initial={{ scale: 0, opacity: 0 }}
@@ -131,7 +132,7 @@ useEffect(() => {
         </motion.div>
       </motion.div>
 
-      {/* Enhanced Spotify Player Popup */}
+      {/* Popup Player UI */}
       <AnimatePresence>
         {isOpen && (
           <motion.div
@@ -149,7 +150,7 @@ useEffect(() => {
               style={{ borderRadius: "50px" }}
               onClick={(e) => e.stopPropagation()}
             >
-              {/* Close Button */}
+              {/* Header */}
               <div className="flex justify-between items-center mb-4">
                 <Button variant="ghost" size="sm" onClick={openExternalLink} className="text-white/60 hover:text-white">
                   <ExternalLink size={16} />
@@ -216,7 +217,7 @@ useEffect(() => {
                 </Button>
               </div>
 
-              {/* Volume and Like */}
+              {/* Volume + Like */}
               <div className="flex items-center justify-between">
                 <Button
                   variant="ghost"
@@ -243,13 +244,11 @@ useEffect(() => {
                 </div>
               </div>
 
-              {/* Hidden Video Element for YouTube/Spotify embeds */}
-              <video
+              {/* Audio Element */}
+              <audio
                 ref={audioRef}
                 className="hidden"
-                onEnded={() => {
-                  setIsPlaying(false)
-                }}
+                onEnded={() => setIsPlaying(false)}
               />
             </motion.div>
           </motion.div>

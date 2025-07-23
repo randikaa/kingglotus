@@ -39,7 +39,7 @@ const initialFrames: Frame[] = [
   },
   {
     id: 2,
-    video: "https://cdn.jsdelivr.net/gh/Team-Hologram/lotuss/2.mp4",
+    video: "https://cdn.jsdelivr.net/gh/Team-Hologram/lotuss2/2.mp4",
     defaultPos: { x: 4, y: 0, w: 4, h: 4 },
     corner: "https://static.cdn-luma.com/files/bcf576df9c38b05f/2_corner_update.png",
     edgeHorizontal: "https://static.cdn-luma.com/files/bcf576df9c38b05f/2_vert_update.png",
@@ -91,7 +91,7 @@ const initialFrames: Frame[] = [
   },
   {
     id: 6,
-    video: "https://cdn.jsdelivr.net/gh/Team-Hologram/lotuss/6.mp4",
+    video: "https://cdn.jsdelivr.net/gh/Team-Hologram/lotuss6/6.mp4",
     defaultPos: { x: 8, y: 4, w: 4, h: 4 },
     corner: "https://static.cdn-luma.com/files/1199340587e8da1d/6_corner.png",
     edgeHorizontal: "https://static.cdn-luma.com/files/1199340587e8da1d/6_corner-1.png",
@@ -104,7 +104,7 @@ const initialFrames: Frame[] = [
   },
   {
     id: 7,
-    video: "https://cdn.jsdelivr.net/gh/Team-Hologram/lotuss/7.mp4",
+    video: "https://cdn.jsdelivr.net/gh/Team-Hologram/lotuss7/7.mp4",
     defaultPos: { x: 0, y: 8, w: 4, h: 4 },
     corner: "https://static.cdn-luma.com/files/b80b5aa00ccc33bd/7_corner.png",
     edgeHorizontal: "https://static.cdn-luma.com/files/b80b5aa00ccc33bd/7_hori.png",
@@ -130,7 +130,7 @@ const initialFrames: Frame[] = [
   },
   {
     id: 9,
-    video: "https://cdn.jsdelivr.net/gh/Team-Hologram/lotuss/9.mp4",
+    video: "https://cdn.jsdelivr.net/gh/Team-Hologram/lotuss9/9.mp4",
     defaultPos: { x: 8, y: 8, w: 4, h: 4 },
     corner: "https://static.cdn-luma.com/files/981e483f71aa764b/9_corner.png",
     edgeHorizontal: "https://static.cdn-luma.com/files/981e483f71aa764b/9_hori.png",
