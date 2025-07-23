@@ -8,6 +8,7 @@ import { Input } from "@/components/ui/input"
 import Navigation from "../../components/Navigation"
 import { useTranslation } from "../../contexts/TranslationContext"
 import { useTheme } from "../../contexts/ThemeContext"
+import Footer from "@/components/Footer"
 
 const musicData = [
   {
@@ -107,7 +108,7 @@ export default function MusicPage() {
     >
       <Navigation />
 
-      <div className="pt-24 px-8">
+      <div className="pt-24 px-8 pb-6">
         <div className="max-w-7xl mx-auto">
           {/* Header */}
           <motion.div
@@ -261,6 +262,8 @@ export default function MusicPage() {
           )}
         </div>
       </div>
+       <Footer/>
     </div>
+    
   )
 }
