@@ -53,7 +53,7 @@ export default function Home() {
                   <div className={`h-px w-full ${theme === "dark" ? "bg-white/10" : "bg-gray-300"}`} />
                 </div>
               </div>
-              <Link
+              {/* <Link
                 href="https://lumalabs.ai"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -65,7 +65,7 @@ export default function Home() {
                   fill
                   className="object-contain"
                 />
-              </Link>
+              </Link> */}
             </div>
           </div>
 
