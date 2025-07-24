@@ -12,6 +12,7 @@ import { Progress } from "@/components/ui/progress"
 import Navigation from "../../components/Navigation"
 import { useTranslation } from "../../contexts/TranslationContext"
 import { useTheme } from "../../contexts/ThemeContext"
+import Footer from "@/components/Footer"
 
 const contributionStats = {
   totalRaised: 45000,
@@ -57,7 +58,7 @@ export default function ContributePage() {
     >
       <Navigation />
 
-      <div className="pt-24 px-8">
+      <div className="pt-24 px-8 pb-5">
         <div className="max-w-7xl mx-auto">
           {/* Header */}
           <motion.div
@@ -225,7 +226,7 @@ export default function ContributePage() {
                       name="name"
                       value={formData.name}
                       onChange={handleChange}
-                      className={`transition-colors ${
+                      className={`transition-colors rounded-[5px] ${
                         theme === "dark"
                           ? "bg-white/10 border-white/20 text-white placeholder:text-white/40"
                           : "bg-white border-gray-300 text-gray-900 placeholder:text-gray-500"
@@ -245,7 +246,7 @@ export default function ContributePage() {
                       type="email"
                       value={formData.email}
                       onChange={handleChange}
-                      className={`transition-colors ${
+                      className={`transition-colors rounded-[5px] ${
                         theme === "dark"
                           ? "bg-white/10 border-white/20 text-white placeholder:text-white/40"
                           : "bg-white border-gray-300 text-gray-900 placeholder:text-gray-500"
@@ -267,7 +268,7 @@ export default function ContributePage() {
                     type="tel"
                     value={formData.mobile}
                     onChange={handleChange}
-                    className={`transition-colors ${
+                    className={`transition-colors rounded-[5px] ${
                       theme === "dark"
                         ? "bg-white/10 border-white/20 text-white placeholder:text-white/40"
                         : "bg-white border-gray-300 text-gray-900 placeholder:text-gray-500"
@@ -288,7 +289,7 @@ export default function ContributePage() {
                     onValueChange={(value) => setFormData({ ...formData, category: value })}
                   >
                     <SelectTrigger
-                      className={`transition-colors ${
+                      className={`transition-colors rounded-[5px] ${
                         theme === "dark"
                           ? "bg-white/10 border-white/20 text-white"
                           : "bg-white border-gray-300 text-gray-900"
@@ -316,7 +317,7 @@ export default function ContributePage() {
                       type="number"
                       value={formData.amount}
                       onChange={handleChange}
-                      className={`transition-colors ${
+                      className={`transition-colors rounded-[5px] ${
                         theme === "dark"
                           ? "bg-white/10 border-white/20 text-white placeholder:text-white/40"
                           : "bg-white border-gray-300 text-gray-900 placeholder:text-gray-500"
@@ -336,7 +337,7 @@ export default function ContributePage() {
                       onValueChange={(value) => setFormData({ ...formData, currency: value })}
                     >
                       <SelectTrigger
-                        className={`transition-colors ${
+                        className={`transition-colors rounded-[5px] ${
                           theme === "dark"
                             ? "bg-white/10 border-white/20 text-white"
                             : "bg-white border-gray-300 text-gray-900"
@@ -352,7 +353,7 @@ export default function ContributePage() {
                   </div>
                 </div>
 
-                <Button type="submit" className="w-full bg-green-500 hover:bg-green-600 text-white font-medium py-3">
+                <Button type="submit" className="w-full rounded-[5px] bg-green-500 hover:bg-green-600 text-white font-medium py-3">
                   <DollarSign size={18} className="mr-2" />
                   {t("contributeNow")}
                 </Button>
@@ -393,6 +394,7 @@ export default function ContributePage() {
           </div>
         </div>
       </div>
+      <Footer />
     </div>
   )
 }

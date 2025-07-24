@@ -293,7 +293,7 @@ export default function Footer() {
               <input
                 type="email"
                 placeholder="Enter your email"
-                className={`flex-1 px-4 py-3 sm:py-4 rounded-lg text-sm rounded-[10px] sm:text-base transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 ${
+                className={`flex-1 px-4 py-3 sm:py-4 rounded-[10px] text-sm sm:text-base transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 ${
                   theme === "dark"
                     ? "bg-white/10 border border-white/20 text-white placeholder:text-white/50"
                     : "bg-white border border-gray-300 text-gray-900 placeholder:text-gray-500"
@@ -302,7 +302,7 @@ export default function Footer() {
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="px-6 py-3 rounded-[10px] sm:py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white text-sm sm:text-base font-medium rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-200 whitespace-nowrap"
+                className="px-6 py-3 sm:py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white text-sm sm:text-base font-medium rounded-[10px] hover:from-blue-600 hover:to-purple-700 transition-all duration-200 whitespace-nowrap"
               >
                 Subscribe
               </motion.button>

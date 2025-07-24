@@ -145,7 +145,7 @@ export default function MusicPage() {
                 placeholder={t("searchSongs")}
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
-                className={`pl-10 transition-colors ${
+                className={`pl-10 transition-colors rounded-[10px] ${
                   theme === "dark"
                     ? "bg-white/10 border-white/20 text-white placeholder:text-white/40"
                     : "bg-white border-gray-300 text-gray-900 placeholder:text-gray-500"
@@ -159,7 +159,7 @@ export default function MusicPage() {
                   variant={selectedGenre === t(genre) ? "default" : "outline"}
                   size="sm"
                   onClick={() => setSelectedGenre(t(genre))}
-                  className={`transition-colors ${
+                  className={`transition-colors rounded-[10px] ${
                     selectedGenre === t(genre)
                       ? theme === "dark"
                         ? "bg-white text-black"

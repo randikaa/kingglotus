@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button"
 import Navigation from "../../components/Navigation"
 import { useTranslation } from "../../contexts/TranslationContext"
 import { useTheme } from "../../contexts/ThemeContext"
+import Footer from "@/components/Footer"
 
 const newsData = [
   {
@@ -50,7 +51,7 @@ export default function NewsPage() {
     >
       <Navigation />
 
-      <div className="pt-24 px-8">
+      <div className="pt-24 px-8 pb-5">
         <div className="max-w-7xl mx-auto">
           {/* Header */}
           <motion.div
@@ -127,7 +128,7 @@ export default function NewsPage() {
                     {newsData[0].excerpt}
                   </p>
                   <Button
-                    className={`self-start transition-colors ${
+                    className={`self-start transition-colors rounded-[10px] ${
                       theme === "dark"
                         ? "bg-white text-black hover:bg-white/90"
                         : "bg-gray-900 text-white hover:bg-gray-800"
@@ -228,6 +229,7 @@ export default function NewsPage() {
           </motion.div>
         </div>
       </div>
+      <Footer />
     </div>
   )
 }

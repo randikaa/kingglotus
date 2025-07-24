@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button"
 import Navigation from "../../components/Navigation"
 import { useTranslation } from "../../contexts/TranslationContext"
 import { useTheme } from "../../contexts/ThemeContext"
+import Footer from "@/components/Footer"
 
 const tattooData = [
   {
@@ -82,7 +83,7 @@ export default function TattooPage() {
     >
       <Navigation />
 
-      <div className="pt-24 px-8">
+      <div className="pt-24 px-8 pb-5">
         <div className="max-w-7xl mx-auto">
           {/* Header */}
           <motion.div
@@ -114,7 +115,7 @@ export default function TattooPage() {
               <Button
                 key={style}
                 variant="outline"
-                className={`transition-colors ${
+                className={`transition-colors rounded-[10px] ${
                   theme === "dark"
                     ? "bg-transparent border-white/20 text-white hover:bg-white/10 hover:border-white/40"
                     : "bg-transparent border-gray-300 text-gray-700 hover:bg-gray-100 hover:border-gray-400"
@@ -151,14 +152,14 @@ export default function TattooPage() {
                     <Button
                       size="sm"
                       variant="ghost"
-                      className="bg-black/40 backdrop-blur-sm text-white hover:bg-black/60"
+                      className="bg-black/40 backdrop-blur-sm text-white hover:bg-black/60 rounded-full"
                     >
                       <Heart size={16} />
                     </Button>
                     <Button
                       size="sm"
                       variant="ghost"
-                      className="bg-black/40 backdrop-blur-sm text-white hover:bg-black/60"
+                      className="bg-black/40 backdrop-blur-sm text-white hover:bg-black/60 rounded-full"
                     >
                       <Share2 size={16} />
                     </Button>
@@ -213,7 +214,7 @@ export default function TattooPage() {
                     </div>
                     <Button
                       size="sm"
-                      className={`border transition-colors ${
+                      className={`border transition-colors rounded-[10px] ${
                         theme === "dark"
                           ? "bg-white/10 hover:bg-white/20 text-white border-white/20"
                           : "bg-gray-100 hover:bg-gray-200 text-gray-900 border-gray-300"
@@ -247,6 +248,9 @@ export default function TattooPage() {
           </motion.div>
         </div>
       </div>
+
+<Footer/>
+
     </div>
   )
 }

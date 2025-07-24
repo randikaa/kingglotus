@@ -11,6 +11,7 @@ import { Textarea } from "@/components/ui/textarea"
 import Navigation from "../../components/Navigation"
 import { useTranslation } from "../../contexts/TranslationContext"
 import { useTheme } from "../../contexts/ThemeContext"
+import Footer from "@/components/Footer"
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -41,7 +42,7 @@ export default function ContactPage() {
     >
       <Navigation />
 
-      <div className="pt-24 px-8">
+      <div className="pt-24 px-8 pb-5">
         <div className="max-w-7xl mx-auto">
           {/* Header */}
           <motion.div
@@ -89,7 +90,7 @@ export default function ContactPage() {
                       name="name"
                       value={formData.name}
                       onChange={handleChange}
-                      className={`transition-colors ${
+                      className={`transition-colors rounded-[5px] ${
                         theme === "dark"
                           ? "bg-white/10 border-white/20 text-white placeholder:text-white/40"
                           : "bg-white border-gray-300 text-gray-900 placeholder:text-gray-500"
@@ -109,7 +110,7 @@ export default function ContactPage() {
                       type="email"
                       value={formData.email}
                       onChange={handleChange}
-                      className={`transition-colors ${
+                      className={`transition-colors rounded-[5px] ${
                         theme === "dark"
                           ? "bg-white/10 border-white/20 text-white placeholder:text-white/40"
                           : "bg-white border-gray-300 text-gray-900 placeholder:text-gray-500"
@@ -129,7 +130,7 @@ export default function ContactPage() {
                     name="subject"
                     value={formData.subject}
                     onChange={handleChange}
-                    className={`transition-colors ${
+                    className={`transition-colors rounded-[5px] ${
                       theme === "dark"
                         ? "bg-white/10 border-white/20 text-white placeholder:text-white/40"
                         : "bg-white border-gray-300 text-gray-900 placeholder:text-gray-500"
@@ -149,7 +150,7 @@ export default function ContactPage() {
                     value={formData.message}
                     onChange={handleChange}
                     rows={6}
-                    className={`resize-none transition-colors ${
+                    className={`resize-none transition-colors rounded-[5px] ${
                       theme === "dark"
                         ? "bg-white/10 border-white/20 text-white placeholder:text-white/40"
                         : "bg-white border-gray-300 text-gray-900 placeholder:text-gray-500"
@@ -160,7 +161,7 @@ export default function ContactPage() {
                 </div>
                 <Button
                   type="submit"
-                  className={`w-full font-medium py-3 transition-colors ${
+                  className={`w-full font-medium py-3 transition-colors rounded-[5px] ${
                     theme === "dark"
                       ? "bg-white text-black hover:bg-white/90"
                       : "bg-gray-900 text-white hover:bg-gray-800"
@@ -193,7 +194,7 @@ export default function ContactPage() {
               <div className="space-y-6">
                 <div className="flex items-start space-x-4">
                   <div
-                    className={`p-3 rounded-lg transition-colors ${theme === "dark" ? "bg-white/10" : "bg-gray-100"}`}
+                    className={`p-3 rounded-[10px] transition-colors ${theme === "dark" ? "bg-white/10" : "bg-gray-100"}`}
                   >
                     <Mail size={24} className={theme === "dark" ? "text-white/80" : "text-gray-600"} />
                   </div>
@@ -204,17 +205,17 @@ export default function ContactPage() {
                       {t("email")}
                     </h3>
                     <p className={`transition-colors ${theme === "dark" ? "text-white/60" : "text-gray-600"}`}>
-                      hello@luma.com
+                      hello@kinglotuss.com
                     </p>
                     <p className={`transition-colors ${theme === "dark" ? "text-white/60" : "text-gray-600"}`}>
-                      support@luma.com
+                      support@wideech.com
                     </p>
                   </div>
                 </div>
 
                 <div className="flex items-start space-x-4">
                   <div
-                    className={`p-3 rounded-lg transition-colors ${theme === "dark" ? "bg-white/10" : "bg-gray-100"}`}
+                    className={`p-3 rounded-[10px] transition-colors ${theme === "dark" ? "bg-white/10" : "bg-gray-100"}`}
                   >
                     <Phone size={24} className={theme === "dark" ? "text-white/80" : "text-gray-600"} />
                   </div>
@@ -225,17 +226,17 @@ export default function ContactPage() {
                       {t("phone")}
                     </h3>
                     <p className={`transition-colors ${theme === "dark" ? "text-white/60" : "text-gray-600"}`}>
-                      +1 (555) 123-4567
+                      +94 (74) 381-9590
                     </p>
                     <p className={`transition-colors ${theme === "dark" ? "text-white/60" : "text-gray-600"}`}>
-                      +1 (555) 987-6543
+                      +94 (94) 081-6740
                     </p>
                   </div>
                 </div>
 
                 <div className="flex items-start space-x-4">
                   <div
-                    className={`p-3 rounded-lg transition-colors ${theme === "dark" ? "bg-white/10" : "bg-gray-100"}`}
+                    className={`p-3 rounded-[10px] transition-colors ${theme === "dark" ? "bg-white/10" : "bg-gray-100"}`}
                   >
                     <MapPin size={24} className={theme === "dark" ? "text-white/80" : "text-gray-600"} />
                   </div>
@@ -246,11 +247,11 @@ export default function ContactPage() {
                       {t("address")}
                     </h3>
                     <p className={`transition-colors ${theme === "dark" ? "text-white/60" : "text-gray-600"}`}>
-                      123 Creative Street
+                      Pitakotta,
                       <br />
-                      San Francisco, CA 94102
+                      Colombo,
                       <br />
-                      United States
+                      Sri Lanka
                     </p>
                   </div>
                 </div>
@@ -285,6 +286,7 @@ export default function ContactPage() {
           </div>
         </div>
       </div>
+      <Footer />
     </div>
   )
 }
