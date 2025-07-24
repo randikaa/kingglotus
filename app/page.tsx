@@ -30,9 +30,9 @@ export default function Home() {
         <div className="w-full h-full flex flex-col md:flex-row items-start gap-8 md:gap-8">
           {/* Left Content */}
           <div className="w-full md:w-[260px] flex-shrink-0 flex flex-col justify-between h-full">
-            <div className="flex flex-col gap-16">
+            <div className="flex flex-col">
               <h1
-                className={`${ppEditorialNewUltralightItalic.className} text-4xl md:text-6xl font-light italic tracking-tighter leading-[130%] transition-colors ${
+                className={`${ppEditorialNewUltralightItalic.className} text-4xl md:text-6xl font-light italic tracking-tighter leading-[130%] transition-colors mt-14 ${
                   theme === "dark" ? "text-white/80" : "text-gray-800"
                 }`}
                 style={{ fontSize: `${4 * headerSize}rem` }}
