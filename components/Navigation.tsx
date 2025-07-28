@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { motion } from "framer-motion"
@@ -19,9 +19,22 @@ const navItems = [
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false)
+  const [isScrolled, setIsScrolled] = useState(false)
   const pathname = usePathname()
   const { language, setLanguage, t } = useTranslation()
   const { theme, toggleTheme } = useTheme()
+
+  // Handle scroll effect
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY
+      // Adjust blur based on scroll position (e.g., blur when scrolled > 50px)
+      setIsScrolled(scrollPosition > 50)
+    }
+
+    window.addEventListener("scroll", handleScroll)
+    return () => window.removeEventListener("scroll", handleScroll)
+  }, [])
 
   const handleLanguageToggle = () => {
     const newLanguage = language === "en" ? "si" : "en"
@@ -30,9 +43,11 @@ export default function Navigation() {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 backdrop-blur-md border-b transition-colors ${
-        theme === "dark" ? "bg-black/80 border-white/10" : "bg-white/80 border-gray-200"
-      }`}
+      className={`fixed top-0 left-0 right-0 z-50 border-b transition-all duration-300 ${
+        theme === "dark" 
+          ? `bg-[#141414]/${isScrolled ? "80" : "100"} border-[#141414]` 
+          : `bg-white/${isScrolled ? "80" : "100"} border-gray-200`
+      } ${isScrolled ? "backdrop-blur-md" : "backdrop-blur-none"}`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">

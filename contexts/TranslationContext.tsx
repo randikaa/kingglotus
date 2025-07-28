@@ -22,12 +22,12 @@ const translations: Translations = {
   // Home page
   brandDesigner: { en: "Wants to About me?", si: "මං ගැන දැනගන්න ඕනද?" },
   brandDescription1: {
-    en: "I’m King Lotuss, I’m a Sri Lankan rapper who speaks the truth through music. My songs are not just about beats — they’re about real life, real feelings, and real stories. I use strong words and deep lyrics to talk about what’s happening around us.I rap in different styles like trap, drill, lo-fi, and conscious rap. Each track has a message. Sometimes it’s about pain, sometimes power — but always real.",
-    si: "මම තමයි King Lotuss, ලංකාවේ underground rap scene එකේ නව ජීවයක් ගෙනාව, හඬින්ම නඩත්තු වෙන්න පුළුවන් වාක්‍යවලින් පිරුණු මගේ bars හරහා, මම කතා කරන්නේ ගම්මිරිස් වගේ හරියටම තියෙන සත්‍යය. Beats වල rhythm එකට නටනවට වඩා, මගේ lyrics වල rhythm එකට හිත වෙනස් වෙනවා. මගේ style එකෙදී trap, drill, lo-fi, conscious rap — එකක්වත් හැරෙන්නෙ නෑ.",
+    en: "King Lotuss is a musician who has touched the hearts of a large number of people with his words. His range is so vast that he is not just another artist. The events and experiences he has faced in his history have made him stand out. Writing raps, singing raps, writing songs and directing are his hobbies. Currently, he is actively involved in creative work with Awadhi Records.",
+    si: "King Lotuss යනු වචන වලින් ඉතා විශාල පිරිසකගේ හදවත ඇමතූ සංගීතඤ්‍යෙකි. ඔහු තවත් එක්‍තරා කලාකරුවෙකු නොවන තරම් දුරකට ඔහුගේ පරාසය විහිදී ඇත. ඔහුගේ ඉතිහාසය මුහුණ දුන් සිදුවීම් සහ අත්දැකීම් ඔහුව මෙසේ ඉහලින් තැබීමට හේතු වී ඇත. රැප් ලිවීම රැප් කිවීම ගීත ලිවීම අධ්‍යක්ෂණය කිරීම ඔහුගේ විනෝදාංශ වේ. වර්තමානය වන විට අවධි රෙකෝඩ් හා එක්ව නිර්මාණ කිරීම් වල නිරත වේ.",
   },
   brandDescription2: {
-    en: "King Lotuss isn’t just a name. It’s a voice for people who don’t get heard.",
-    si: "King Lotuss කියන්නෙ නමක් නෙවෙයි — එය හැඟීමක්.",
+    en: "Lota has consistently been among the top 10 favorite rappers of Sri Lankan fans since 2019!",
+    si: "2019 සිට මේ දක්වා ලාංකීය රසිකයන්ගේ ප්‍රියතම රැපර්ස්ල 10 අතර ලෝටා නිරන්තරයෙන් සැරිසරයි!",
   },
   favoriteWorks: { en: "Here are some of our favorite works so far.", si: "මෙතෙක් අපගේ ප්‍රියතම කෘති කිහිපයක් මෙන්න." },
 

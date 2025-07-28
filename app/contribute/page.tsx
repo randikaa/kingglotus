@@ -15,7 +15,7 @@ import { useTheme } from "../../contexts/ThemeContext"
 import Footer from "@/components/Footer"
 
 const contributionStats = {
-  totalRaised: 45000,
+  totalRaised: 0,
   target: 100000,
   contributors: 234,
   categories: {
@@ -60,6 +60,7 @@ export default function ContributePage() {
 
       <div className="pt-24 px-8 pb-5">
         <div className="max-w-7xl mx-auto">
+
           {/* Header */}
           <motion.div
             initial={{ opacity: 0, y: 50 }}
