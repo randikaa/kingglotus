@@ -89,7 +89,7 @@ export default function ContributePage() {
               className="space-y-8"
             >
               {/* Main Progress */}
-              <div
+              {/* <div
                 className={`backdrop-blur-sm rounded-2xl p-8 border transition-colors ${
                   theme === "dark" ? "bg-white/5 border-white/10" : "bg-white border-gray-200 shadow-lg"
                 }`}
@@ -125,10 +125,10 @@ export default function ContributePage() {
                     {progressPercentage.toFixed(1)}% {t("of")} {t("target").toLowerCase()} reached
                   </p>
                 </div>
-              </div>
+              </div> */}
 
               {/* Stats Cards */}
-              <div className="grid grid-cols-2 gap-4">
+              {/* <div className="grid grid-cols-2 gap-4">
                 <div
                   className={`backdrop-blur-sm rounded-xl p-6 border transition-colors ${
                     theme === "dark" ? "bg-white/5 border-white/10" : "bg-white border-gray-200 shadow-lg"
@@ -168,7 +168,7 @@ export default function ContributePage() {
                     $12,450
                   </p>
                 </div>
-              </div>
+              </div> */}
 
               {/* Category Breakdown */}
               <div

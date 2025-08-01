@@ -1,14 +1,14 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { Play, Heart, ChevronLeft, ChevronRight } from "lucide-react"
+import { Play, Heart } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { useTranslation } from "../contexts/TranslationContext"
 import { useTheme } from "../contexts/ThemeContext"
 import { Swiper, SwiperSlide } from "swiper/react"
-import { Navigation, Autoplay } from "swiper/modules"
+import { Autoplay, Pagination } from "swiper/modules"
 import "swiper/css"
-import "swiper/css/navigation"
+import "swiper/css/pagination"
 
 const latestSongs = [
   {
@@ -79,7 +79,7 @@ export default function LatestMusic() {
         </motion.div>
 
         <Swiper
-          modules={[Navigation, Autoplay]}
+          modules={[Autoplay, Pagination]}
           spaceBetween={24}
           slidesPerView={1}
           breakpoints={{
@@ -88,10 +88,7 @@ export default function LatestMusic() {
             1280: { slidesPerView: 4 },
           }}
           autoplay={{ delay: 3000, disableOnInteraction: false }}
-          navigation={{
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
-          }}
+          pagination={{ clickable: true }}
           className="relative"
         >
           {latestSongs.map((song, index) => (
@@ -161,21 +158,26 @@ export default function LatestMusic() {
               </motion.div>
             </SwiperSlide>
           ))}
-          <div
-            className={`swiper-button-prev absolute top-1/2 -left-12 transform -translate-y-1/2 ${
-              theme === "dark" ? "text-white/50" : "text-gray-500"
-            }`}
-          >
-            <ChevronLeft size={10} />
-          </div>
-          <div
-            className={`swiper-button-next absolute top-1/2 -right-12 transform -translate-y-1/2 ${
-              theme === "dark" ? "text-white/50" : "text-gray-500"
-            }`}
-          >
-            <ChevronRight size={10} />
-          </div>
         </Swiper>
+        <style jsx global>{`
+          .swiper-pagination-bullets {
+            display: flex;
+            justify-content: center;
+            margin-top: 1.5rem;
+            gap: 0.5rem;
+          }
+          .swiper-pagination-bullet {
+            width: 10px;
+            height: 10px;
+            background: ${theme === "dark" ? "#fff8" : "#3338"};
+            opacity: 1;
+            border-radius: 9999px;
+            transition: background 0.2s;
+          }
+          .swiper-pagination-bullet-active {
+            background: ${theme === "dark" ? "#fff" : "#111"};
+          }
+        `}</style>
       </div>
     </section>
   )

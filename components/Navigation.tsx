@@ -43,12 +43,16 @@ export default function Navigation() {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 border-b transition-all duration-300 ${
-        theme === "dark" 
-          ? `bg-[#141414]/${isScrolled ? "80" : "100"} border-[#141414]` 
-          : `bg-white/${isScrolled ? "80" : "100"} border-gray-200`
-      } ${isScrolled ? "backdrop-blur-md" : "backdrop-blur-none"}`}
-    >
+  className={`fixed top-0 left-0 right-0 z-50 border-b transition-all duration-300 ${
+    theme === "dark"
+      ? isScrolled
+        ? "bg-[#141414]/70 border-[#141414] backdrop-blur-2xl"
+        : "bg-[#141414]/100 border-[#141414] backdrop-blur-none"
+      : isScrolled
+        ? "bg-white/80 border-gray-200 backdrop-blur-2xl"
+        : "bg-white/100 border-gray-200 backdrop-blur-none"
+  }`}
+>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <Link
