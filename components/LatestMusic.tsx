@@ -78,106 +78,116 @@ export default function LatestMusic() {
           </p>
         </motion.div>
 
-        <Swiper
-          modules={[Autoplay, Pagination]}
-          spaceBetween={24}
-          slidesPerView={1}
-          breakpoints={{
-            640: { slidesPerView: 2 },
-            1024: { slidesPerView: 3 },
-            1280: { slidesPerView: 4 },
-          }}
-          autoplay={{ delay: 3000, disableOnInteraction: false }}
-          pagination={{ clickable: true }}
-          className="relative"
-        >
-          {latestSongs.map((song, index) => (
-            <SwiperSlide key={song.id}>
-              <motion.div
-                initial={{ opacity: 0, scale: index === 0 ? 1.1 : 0.9 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                whileHover={{ y: -10, scale: 1.02 }}
-                className={`group backdrop-blur-lg rounded-2xl p-4 transition-all duration-300 ${
-                  theme === "dark"
-                    ? "bg-gradient-to-b from-white/10 to-white/5 hover:bg-white/15"
-                    : "bg-white/90 hover:bg-white shadow-lg hover:shadow-2xl"
-                }`}
-              >
-                <div className="relative mb-4">
-                  <img
-                    src={song.image || "/placeholder.svg"}
-                    alt={song.title}
-                    className="w-full aspect-square object-cover rounded-xl"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl flex items-center justify-center">
-                    <Button
-                      size="sm"
-                      className="rounded-full bg-green-500 hover:bg-green-600 text-white transform group-hover:scale-110 transition-transform"
-                    >
-                      <Play size={16} />
-                    </Button>
+        <div className="relative">
+          <Swiper
+            modules={[Autoplay, Pagination]}
+            spaceBetween={24}
+            slidesPerView={1}
+            breakpoints={{
+              640: { slidesPerView: 2 },
+              1024: { slidesPerView: 3 },
+              1280: { slidesPerView: 4 },
+            }}
+            autoplay={{ delay: 3000, disableOnInteraction: false }}
+            pagination={{ clickable: true }}
+            className="relative"
+          >
+            {latestSongs.map((song, index) => (
+              <SwiperSlide key={song.id}>
+                <motion.div
+                  initial={{ opacity: 0, scale: index === 0 ? 1.1 : 0.9 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  whileHover={{ y: -10, scale: 1.02 }}
+                  className={`group backdrop-blur-lg rounded-2xl p-4 transition-all duration-300 ${
+                    theme === "dark"
+                      ? "bg-gradient-to-b from-white/10 to-white/5 hover:bg-white/15"
+                      : "bg-white/90 hover:bg-white shadow-lg hover:shadow-2xl"
+                  }`}
+                >
+                  <div className="relative mb-4">
+                    <img
+                      src={song.image || "/placeholder.svg"}
+                      alt={song.title}
+                      className="w-full aspect-square object-cover rounded-xl"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl flex items-center justify-center">
+                      <Button
+                        size="sm"
+                        className="rounded-full bg-green-500 hover:bg-green-600 text-white transform group-hover:scale-110 transition-transform"
+                      >
+                        <Play size={16} />
+                      </Button>
+                    </div>
                   </div>
-                </div>
-                <div className="space-y-2">
-                  <h3
-                    className={`font-semibold truncate transition-colors ${
-                      theme === "dark" ? "text-white" : "text-gray-900"
-                    }`}
-                  >
-                    {song.title}
-                  </h3>
-                  <p
-                    className={`text-sm truncate transition-colors ${
-                      theme === "dark" ? "text-white/70" : "text-gray-600"
-                    }`}
-                  >
-                    {song.artist}
-                  </p>
-                  <div className="flex items-center justify-between">
-                    <span
-                      className={`text-xs transition-colors ${
-                        theme === "dark" ? "text-white/50" : "text-gray-500"
+                  <div className="space-y-2">
+                    <h3
+                      className={`font-semibold truncate transition-colors ${
+                        theme === "dark" ? "text-white" : "text-gray-900"
                       }`}
                     >
-                      {song.duration}
-                    </span>
-                    <Button
-                      variant="ghost"
-                      size="sm"
-                      className={`p-1 transition-colors ${
-                        theme === "dark"
-                          ? "text-white/70 hover:text-red-500"
-                          : "text-gray-500 hover:text-red-500"
+                      {song.title}
+                    </h3>
+                    <p
+                      className={`text-sm truncate transition-colors ${
+                        theme === "dark" ? "text-white/70" : "text-gray-600"
                       }`}
                     >
-                      <Heart size={14} className="group-hover:fill-red-500" />
-                    </Button>
+                      {song.artist}
+                    </p>
+                    <div className="flex items-center justify-between">
+                      <span
+                        className={`text-xs transition-colors ${
+                          theme === "dark" ? "text-white/50" : "text-gray-500"
+                        }`}
+                      >
+                        {song.duration}
+                      </span>
+                      <Button
+                        variant="ghost"
+                        size="sm"
+                        className={`p-1 transition-colors ${
+                          theme === "dark"
+                            ? "text-white/70 hover:text-red-500"
+                            : "text-gray-500 hover:text-red-500"
+                        }`}
+                      >
+                        <Heart size={14} className="group-hover:fill-red-500" />
+                      </Button>
+                    </div>
                   </div>
-                </div>
-              </motion.div>
-            </SwiperSlide>
-          ))}
-        </Swiper>
-        <style jsx global>{`
-          .swiper-pagination-bullets {
-            display: flex;
-            justify-content: center;
-            margin-top: 1.5rem;
-            gap: 0.5rem;
-          }
-          .swiper-pagination-bullet {
-            width: 10px;
-            height: 10px;
-            background: ${theme === "dark" ? "#fff8" : "#3338"};
-            opacity: 1;
-            border-radius: 9999px;
-            transition: background 0.2s;
-          }
-          .swiper-pagination-bullet-active {
-            background: ${theme === "dark" ? "#fff" : "#111"};
-          }
-        `}</style>
+                </motion.div>
+              </SwiperSlide>
+            ))}
+          </Swiper>
+          <style jsx global>{`
+            .swiper {
+              position: relative;
+              padding-bottom: 3.5rem; /* Add space for bullets */
+            }
+            .swiper-pagination-bullets {
+              position: absolute;
+              left: 0;
+              right: 0;
+              bottom: 0.5rem; /* Adjust as needed */
+              display: flex;
+              justify-content: center;
+              gap: 0.5rem;
+              margin-top: 0;
+            }
+            .swiper-pagination-bullet {
+              width: 10px;
+              height: 10px;
+              background: ${theme === "dark" ? "#fff8" : "#3338"};
+              opacity: 1;
+              border-radius: 9999px;
+              transition: background 0.2s;
+            }
+            .swiper-pagination-bullet-active {
+              background: ${theme === "dark" ? "#fff" : "#111"};
+            }
+          `}</style>
+        </div>
       </div>
     </section>
   )
