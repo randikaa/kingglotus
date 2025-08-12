@@ -6,11 +6,15 @@ import EnhancedSpotifyPlayer from "../components/EnhancedSpotifyPlayer"
 import LatestMusic from "../components/LatestMusic"
 import Navigation from "../components/Navigation"
 import Footer from "../components/Footer"
+import OrbitingCirclesDemo from "../components/OrbitingCirclesDemo"
 import { ppEditorialNewUltralightItalic, inter } from "./fonts"
 import { useTranslation } from "../contexts/TranslationContext"
 import { useTheme } from "../contexts/ThemeContext"
 import Image from "next/image"
 import Link from "next/link"
+
+import { OrbitingCircles } from "@/components/magicui/orbiting-circles";
+import { File, Settings, Search } from "lucide-react";
 
 export default function Home() {
   const [headerSize] = useState(1.2)
@@ -68,6 +72,10 @@ export default function Home() {
 
       {/* Latest Music Section */}
       <LatestMusic />
+
+      {/* Collab */}
+      <OrbitingCirclesDemo/>
+
 
       {/* Footer */}
       <Footer />

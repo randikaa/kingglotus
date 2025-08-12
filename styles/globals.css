@@ -92,3 +92,22 @@ body {
     @apply bg-background text-foreground;
   }
 }
+
+/* Add this to your global CSS or inside a <style jsx global> block */
+@keyframes orbit {
+  0% {
+    transform: rotate(var(--angle, 0deg)) translateX(var(--radius, 160px)) rotate(calc(-1 * var(--angle, 0deg)));
+  }
+  100% {
+    transform: rotate(calc(var(--angle, 0deg) + 360deg)) translateX(var(--radius, 160px)) rotate(calc(-1 * (var(--angle, 0deg) + 360deg)));
+  }
+}
+
+.animate-orbit {
+  animation: orbit var(--duration, 20s) linear infinite;
+  left: 50%;
+  top: 50%;
+  /* Center the icon */
+  transform: rotate(var(--angle, 0deg)) translateX(var(--radius, 160px)) rotate(calc(-1 * var(--angle, 0deg)));
+  /* The initial transform is needed for static positioning before animation starts */
+}
