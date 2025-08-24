@@ -57,6 +57,13 @@ const translations: Translations = {
   },
   viewAllMusic: { en: "View All Music", si: "සියලුම සංගීතය බලන්න" },
 
+  // Latest Music
+  collab: { en: "My Collab", si: "නවතම සංගීතය" },
+  collabDis: {
+    en: "Discover the newest tracks from our featured artists and contributors",
+    si: "අපගේ විශේෂාංගගත කලාකරුවන් සහ දායකයන්ගේ නවතම ගීත සොයා ගන්න",
+  },
+
   // Music page
   musicCollection: { en: "Music Collection", si: "සංගීත එකතුව" },
   exploreCurated: {
